@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f0f;
+    color: #00ffcc;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: linear-gradient(90deg, #4CAF50, #00BCD4);
+    color: white;
+    padding: 2em 0;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out, neonGlow 1.5s infinite alternate;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+nav {
+    text-align: center;
+    margin: 1em 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: #00ffcc;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    animation: colorChange 2s infinite alternate;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+section {
+    padding: 2em;
+    margin: 2em auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    width: 80%;
+    max-width: 800px;
+    animation: fadeIn 2s ease-in-out, slideIn 1s forwards;
+}
+
+footer {
+    background: linear-gradient(90deg, #00BCD4, #4CAF50);
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.id-photo {
+    width: 120px;
+    height: 160px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    animation: fadeIn 2s ease-in-out, rotate 5s infinite linear;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 0.5em 0;
+}
+
+a {
+    color: #00ffcc;
+}
+
+a:hover {
+    color: #4CAF50;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes neonGlow {
+    from { text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 60px #00ffcc, 0 0 70px #00ffcc; }
+    to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 60px #00ffcc, 0 0 70px #00ffcc, 0 0 80px #00ffcc; }
+}
+
+@keyframes colorChange {
+    from { color: #00ffcc; }
+    to { color: #4CAF50; }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
